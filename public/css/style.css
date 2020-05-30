@@ -1,0 +1,18 @@
+#sectionMain {
+    display: none;
+}
+
+#seccionChat {
+    float: left;
+    padding: 10px;
+}
+
+#windowChat {
+    height: 400px;
+}
+
+#sectionUsers{
+    float: left;
+    padding: 10px;
+    margin-left: 5px;
+}

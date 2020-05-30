@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación CHAT en Node.js</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chat Room</h1>
+        </header>
+        <section id="sectionRegisterUser" class="jumbotron">
+            <div class="container">
+                <p>Escriba un nombre de usuario:</p>
+                <div id="error" class="alert alert-warning" style="display:none;"></div>
+                <form id="formUser">
+                    <div class="input-group">
+                        <input id="user" class="form-control" placeholder="Nombre del Usuario">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="sectionMain">
+            <div id="seccionChat" class="jumbotron col-xs-10">
+                <article id="windowChat"></article>
+                <form id="formChat">
+                    <div class="input-group">
+                        <input id="message" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <aside id="sectionUsers" class="jumbotron">
+                <h4>Usuarios</h4>
+                <article id="listUsers"></article>
+            </aside>
+        </section>
+    </div>
+    <script type="application/javascript" src="./socket.io/socket.io.js"></script>
+    <script type="application/javascript" src="./js/appchat.js"></script>
+</body>
+</html>
